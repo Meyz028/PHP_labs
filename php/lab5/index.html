@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Спортивна ліга — турнірна таблиця</title>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: 2rem auto; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: .4rem .6rem; text-align: left; }
+    th { background: #f0f0f0; }
+    .msg { padding: .6rem; color: #b00020; }
+    form { display: flex; gap: .5rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <h1>Турнірна таблиця</h1>
+
+  <input id="search" type="text" placeholder="Пошук за містом...">
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Команда</th><th>Місто</th><th>Очки</th></tr>
+    </thead>
+    <tbody id="results"></tbody>
+  </table>
+
+  <h2>Додати команду</h2>
+  <form id="add-form">
+    <input name="name" placeholder="Назва" required>
+    <input name="city" placeholder="Місто" required>
+    <input name="points" type="number" min="0" value="0" required>
+    <button type="submit">Додати</button>
+  </form>
+  <div id="form-msg" class="msg"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
