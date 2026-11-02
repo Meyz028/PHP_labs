@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ПР12 — Генератор рецептів на вечерю</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Генератор рецептів на вечерю</h1>
+
+    <section class="generator">
+      <div class="shuffle-icon" id="shuffle-icon" aria-hidden="true">🍳</div>
+
+      <button id="generate-btn" class="btn" type="button">Що на вечерю?</button>
+
+      <!-- aria-live: скрінрідер озвучить результат -->
+      <article class="recipe-card" id="recipe-card" hidden aria-live="polite">
+        <h3 id="recipe-title"></h3>
+        <p id="recipe-meta"></p>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
